@@ -50,7 +50,7 @@ print(my_list)
 # Your code should be inserted where the comment is (line 4)
 # Your program should be exactly 5 lines long
 
-#!/usr/bin/python3
+
 a = 89
 b = 10
 
