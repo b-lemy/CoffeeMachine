@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+
+x = isinstance(5, int)
+print(x)
+
+
 def to_subtract(list_num):
     to_sub = 0
     max_list = max(list_num)
@@ -7,7 +12,7 @@ def to_subtract(list_num):
         if max_list > n:
             to_sub += n
 
-    return (max_list - to_sub)
+    return max_list - to_sub
 
 
 def roman_to_int(roman_string):
@@ -25,7 +30,9 @@ def roman_to_int(roman_string):
     list_num = [0]
 
     for ch in roman_string:
+        print(ch)
         for r_num in list_keys:
+            # print(r_num)
             if r_num == ch:
                 if rom_n.get(ch) <= last_rom:
                     num += to_subtract(list_num)
@@ -34,7 +41,24 @@ def roman_to_int(roman_string):
                     list_num.append(rom_n.get(ch))
 
                 last_rom = rom_n.get(ch)
+                # print(last_rom)
 
     num += to_subtract(list_num)
 
-    return (num)
+    return num
+
+
+roman_number = "XI"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+# roman_number = "VII"
+# print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+#
+# roman_number = "IX"
+# print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+#
+# roman_number = "LXXXVII"
+# print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+#
+# roman_number = "DCCVII"
+# print("{} = {}".format(roman_number, roman_to_int(roman_number)))
