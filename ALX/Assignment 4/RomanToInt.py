@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 
 x = isinstance(5, int)
 print(x)
