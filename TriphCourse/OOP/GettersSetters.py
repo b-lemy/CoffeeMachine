@@ -1,50 +1,41 @@
-class Square:
-    def __init__(self, height=0, width=0):
-        self.height = height
-        self.width = width
 
-        print(height)
+class Squarely:
+    """Represent a square."""
 
-    @property
-    def height(self):
-        print('Retrieving Height')
+    def __init__(self, size=0):
 
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        if value.isdigit():
-            self.__height = value
-        else:
-            print('please enter a digit')
+        self.size = size
 
     @property
-    def width(self):
-        print('Retrieving width')
+    def size(self):
+        """Get/set the current size of the square."""
+        print(self.__size)
+        return self.__size
 
-        return self.__width
+    @size.setter
+    def size(self, value):
+        if not isinstance(value, int):
+            print(value)
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
 
-    @width.setter
-    def width(self, value):
-        if value.isdigit():
-            self.__width = value
-        else:
-            print('please enter a digit')
-
-    def getArea(self):
-        return int(self.__height) * int(self.__width)
+    def area(self):
+        """Return the current area of the square."""
+        return self.__size * self.__size
 
 
-def main():
-    area = Square()
+my_square = Squarely(89)
+print("Area: {} for size: {}".format(my_square.area(), my_square.size))
 
-    height = input('enter Height')
-    width = input('enter width')
+my_square.size = 3
+print("Area: {} for size: {}".format(my_square.area(), my_square.size))
 
-    area.height = height
+try:
+    my_square.size = "5 feet"
+    print("Area: {} for size: {}".format(my_square.area(), my_square.size))
+except Exception as e:
+    print(e)
 
-    area.width = width
 
-    print('the area is ', area.getArea())
-
-main()
