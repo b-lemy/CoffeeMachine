@@ -11,3 +11,9 @@ data_dict = {
 }
 df = pandas.DataFrame(data_dict)
 df.to_csv('Trial.csv')
+
+
+print(list(range(10, 0, -2)))
+
+a = "Python is cool"
+print(a[7:-5])
