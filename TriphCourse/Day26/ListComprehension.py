@@ -13,17 +13,19 @@ print(array)
 
 # with list comprehension
 # new_list = [new_list for item in list]
-
 new_list = [n * 3 for n in numbers]
 print(new_list)
 
 name = 'Brian'
-
 new_name = [letter for letter in name]
-
 print(new_name)
 
 # new_list = [new_list for item in list if test]
-
 new_nam = [letter for letter in name if letter != 'n']
 print(new_nam)
+
+
+with open('file.txt') as file_1:
+    file_data = file_1.readlines()
+
+print(file_data)
