@@ -32,3 +32,6 @@ print(numbers)
 for index, value in enumerate(['banana', 'apple', 'pear', 'quince']):
     # numbers[index] = value ** 2
     print(index, value)
+l1 = [1, 2, 3]
+l2 = [1, 2, 3]
+print(l1 is l2)

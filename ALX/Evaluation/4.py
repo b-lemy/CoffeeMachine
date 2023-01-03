@@ -3,7 +3,8 @@ a = {'id': 89, 'name': "John", 'projects': [1, 2, 3, 4],
 print(a.get('friends')[-1].get("name"))
 
 for i in range(2, 10, 2):
-    print(i, end=" ")
+    print(i, end="-")
+
 
 a = [1, 2, 3, 4]
 a[2] = 10
