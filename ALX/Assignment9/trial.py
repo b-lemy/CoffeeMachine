@@ -1,7 +1,12 @@
 a = 100
-b = a
+b = a + 1
 print(id(a))
 print(id(b))
+
+s1 = "Best School"
+s3 = "Best School"
+s2 = s1
+print(s1 is s3)
 
 numbers = [17, 123]
 print(numbers[9 - 8])
